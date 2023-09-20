@@ -1,13 +1,20 @@
 package org.launchcode.models;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class User {
+    
+    @NotBlank (message = "Username is required")
+    @Size(min = 5, max = 15, message = "Username must be between 5 and 15 characters.")
     private String username;
+    @Email (message = "Must be a proper email format")
     private String email;
+    @NotBlank(message = "Password is required")
+    @Size(min = 6, message = "Password must be at least 6 characters long.")
     private String password;
 
-    public User() {
-
-    }
 
     public User(String username, String email, String password) {
         this();
@@ -16,6 +23,10 @@ public class User {
         this.password = password;
     }
 
+    @NotBlank
+    public User() {
+
+    }
     public String getUsername() {
         return username;
     }
