@@ -15,16 +15,19 @@
     <label>
         Email:
         <input type = 'email' name = 'email' th:value="${email}">
+        <p class="error" th:errors="${user.username}"></p>
     </label>
 
     <label>
         Password:
         <input type = 'password' name = 'password'>
+        <p class="error" th:errors="${user.password}"></p>
     </label>
 
     <label>
         Verify Password:
         <input type = 'password' name = 'verify'>
+        <p class="error" th:errors="${user.password}"></p>
     </label>
 
     <p th:text="${error}"></p>
