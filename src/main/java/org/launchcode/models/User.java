@@ -1,23 +1,27 @@
 package org.launchcode.models;
 
 public class User {
-
-    private String userName;
+    private String username;
     private String email;
     private String password;
 
-    public User(String userName, String email, String password) {
-        this.userName = userName;
+    public User() {
+
+    }
+
+    public User(String username, String email, String password) {
+        this();
+        this.username = username;
         this.email = email;
         this.password = password;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -35,5 +39,4 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }
